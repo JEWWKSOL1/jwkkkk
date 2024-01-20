@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Éléments Animés</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            background-image: url('background.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .falling-object {
+            position: absolute;
+            user-select: none;
+        }
+
+        .star-of-david, .gold-coin {
+            color: #ffd700;
+            font-size: 20px; /* Ajustez la taille si nécessaire */
+        }
+
+        /* Styles pour les boutons visibles */
+        .redirect-button {
+            opacity: 0; /* Modifié pour rendre les boutons invisibles */
+            position: absolute;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .redirect-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Boutons de redirection -->
+    <a href="https://t.me/JewWifKippaSol_Portal" class="redirect-button" style="top: 24%; left: 70%; width: 290px;">URL 1</a>
+    <a href="https://twitter.com/SolanaJew" class="redirect-button" style="top: 36%; left: 70%; width: 290px;">URL 2</a>
+    <a href="https://url3.com" class="redirect-button" style="top: 48%; left: 70%; width: 290px;">URL 3</a>
+
+    <script>
+        // Fonction pour générer un élément qui tombe
+        function createFallingElement(elementClass, content) {
+            const element = document.createElement('div');
+            element.textContent = content;
+            element.classList.add('falling-object', elementClass);
+            document.body.appendChild(element);
+
+            element.style.left = Math.random() * 100 + 'vw';
+            element.style.top = '-50px';
+
+            const fallDuration = Math.random() * 3 + 2;
+            element.style.transition = `top ${fallDuration}s linear`;
+
+            setTimeout(() => {
+                element.style.top = '100vh';
+            }, 100);
+
+            setTimeout(() => {
+                element.remove();
+            }, fallDuration * 1000);
+        }
+
+        // Génère des étoiles de David et des pièces d'or
+        setInterval(() => {
+            createFallingElement('star-of-david', '✡');
+            createFallingElement('gold-coin', '💰');
+        }, 300);
+    </script>
+</body>
+</html>
