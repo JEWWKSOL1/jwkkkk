@@ -160,7 +160,7 @@ body::before {
 
 .contract-text {
     position: fixed;
-    bottom: 280px;
+    bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Courier New', Courier, monospace;
