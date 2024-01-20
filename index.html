@@ -35,9 +35,8 @@
 
         /* Styles pour les boutons visibles */
         .redirect-button {
-            opacity: 100%; /* Modifié pour rendre les boutons invisibles */
+            opacity: 100%;
             position: absolute;
-            padding: 10px 20px;
             font-size: 16px;
             color: white;
             background-color: #007bff;
@@ -51,13 +50,19 @@
             background-color: #0056b3;
             transform: scale(1.1); /* Effet de zoom au survol */
         }
+
+        /* Styles spécifiques pour les images boutons */
+        .redirect-button img {
+            width: 100%; /* Redimensionne l'image pour remplir le conteneur */
+            height: auto; /* Assure une hauteur proportionnelle */
+        }
     </style>
 </head>
 <body>
     <!-- Boutons de redirection -->
-    <img src="dl.png" class="redirect-button"><a href="https://t.me/JewWifKippaSol_Portal" class="redirect-button" style="top: 24%; left: 78%; width: 310px;"></a></img>
-    <img src="chart.png" class="redirect-button"> <a href="https://twitter.com/SolanaJew" class="redirect-button" style="top: 36%; left: 78%; width: 310px;"></a></img>
-    <img src="twitter.png" class="redirect-button"><a href="https://url3.com" class="redirect-button" style="top: 48%; left: 78%; width: 310px;"></a></img>
+    <a href="https://t.me/JewWifKippaSol_Portal" class="redirect-button" style="top: 24%; left: 78%; width: 310px;"><img src="dl.png" alt="DL Button"></a>
+    <a href="https://twitter.com/SolanaJew" class="redirect-button" style="top: 36%; left: 78%; width: 310px;"><img src="chart.png" alt="Chart Button"></a>
+    <a href="https://url3.com" class="redirect-button" style="top: 48%; left: 78%; width: 310px;"><img src="twitter.png" alt="Twitter Button"></a>
 
     <script>
         // Fonction pour générer un élément qui tombe
