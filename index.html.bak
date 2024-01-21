@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PussyR7</title>
+    <link rel="stylesheet" href="style.css">
+		<link rel="icon" type="x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="background-gif"></div>
+    <div class="container">
+        <div class="image-wrapper">
+            <!-- Textes "Click Me" à gauche et à droite de l'image -->
+            <div class="click-me" style="left: -420px;">Click me!</div>
+            <div class="click-me" style="right: -420px;">Click me!</div>
+
+            <img src="PR7.jpeg" alt="Image cliquable" id="imageClickable" class="effet-image">
+            <!-- Suppression des flèches du haut et du bas -->
+            <div class="arrow" style="left: -250px; top: 50%; transform: translate(0, -50%) rotate(270deg);">&#8595;</div>
+            <div class="arrow" style="right: -250px; top: 50%; transform: translate(0, -50%) rotate(90deg);">&#8595;</div>
+        </div>
+        <!-- Trois boutons sous l'image -->
+        <div class="button-wrapper">
+            <button class="custom-button">Telegram</button>
+            <button class="custom-button">Twitter</button>
+            <button class="custom-button">Chart</button>
+        </div>
+        <div id="confetti-wrapper"></div>
+    </div>
+    <audio id="son" src="sui.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
